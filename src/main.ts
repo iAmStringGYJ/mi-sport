@@ -8,9 +8,9 @@ import { isEmail, isPhone } from './utils/validate'
 ;(async () => {
   const spinner = ora('正在刷步中...').start()
   try {
-    const account = `123421`
-    const password = `23456789`
-    const step = randomFullClose(18650, 36906) // 根据指定范围生成随机步数
+    const account = `2365069711@qq.com`
+    const password = `123456789aB`
+    const step = randomFullClose(18650, 25906) // 根据指定范围生成随机步数
     if (!isPhone(account) && !isEmail(account)) throw new Error(`请检查账号是否为手机号或邮箱`)
     const zeppLife = new ZeepLife(account, password, step)
     const data = await zeppLife.main()
